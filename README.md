@@ -2,7 +2,7 @@ Detailed setup and execution instructions:
 
 Step 1 – Install Python:
 
-Go to https://www.python.org/downloads/
+• Go to https://www.python.org/downloads/
 
 • Download the latest Python 3.x Windows installer
 
