@@ -14,7 +14,7 @@ Step 2 – Download the application:
 
 •	Go to the GitHub repository, assignment2-SoftTest-QA, repository link:
     
-    o	https://github.com/jeg9137/assignment2-SoftTest-QA
+    https://github.com/jeg9137/assignment2-SoftTest-QA
 
 •	Download bmi_calculator.py and test_bmi_calculator.py
 
