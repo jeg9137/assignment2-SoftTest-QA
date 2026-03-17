@@ -17,8 +17,8 @@ def calculate_bmi(height_feet, height_inches, weight_lbs):
         float: BMI value rounded to 1 decimal place
     """
     total_inches = (height_feet * 12) + height_inches
-    weight_kg = weight_lbs * 0.45
-    height_m = total_inches * 0.025
+    weight_kg = weight_lbs * 0.453592
+    height_m = total_inches * 0.0254
     bmi = weight_kg / (height_m ** 2)
     return round(bmi, 1)
 
@@ -60,6 +60,10 @@ def run_bmi_calculator():
 
             if height_feet < 0 or height_inches < 0 or weight_lbs <= 0:
                 print("Error: Please enter positive values.")
+                continue
+
+            if height_inches >= 12:
+                print("Error: Inches must be less than 12.")
                 continue
 
             bmi = calculate_bmi(height_feet, height_inches, weight_lbs)
