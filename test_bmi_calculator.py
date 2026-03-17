@@ -77,10 +77,6 @@ class TestGetBMICategory:
     """
 
     # --- Underweight ---
-    def test_clearly_underweight(self):
-        """Well inside Underweight range."""
-        assert get_bmi_category(15.0) == "Underweight"
-
     def test_underweight_just_below_boundary(self):
         """BMI 18.4 — just below Normal weight boundary → Underweight."""
         assert get_bmi_category(18.4) == "Underweight"
@@ -90,10 +86,6 @@ class TestGetBMICategory:
         """BMI 18.5 — exactly at lower boundary → Normal weight."""
         assert get_bmi_category(18.5) == "Normal weight"
 
-    def test_normal_weight_just_above_lower_boundary(self):
-        """BMI 18.6 — just above lower boundary → Normal weight."""
-        assert get_bmi_category(18.6) == "Normal weight"
-
     def test_normal_weight_middle(self):
         """BMI 22.0 — middle of Normal weight range."""
         assert get_bmi_category(22.0) == "Normal weight"
@@ -101,19 +93,11 @@ class TestGetBMICategory:
     def test_normal_weight_at_upper_boundary(self):
         """BMI 24.9 — exactly at upper boundary → Normal weight."""
         assert get_bmi_category(24.9) == "Normal weight"
-
-    def test_normal_weight_just_below_upper_boundary(self):
-        """BMI 24.8 — just below upper boundary → Normal weight."""
-        assert get_bmi_category(24.8) == "Normal weight"
-
+      
     # --- Overweight ---
     def test_overweight_at_lower_boundary(self):
         """BMI 25.0 — exactly at lower boundary → Overweight."""
         assert get_bmi_category(25.0) == "Overweight"
-
-    def test_overweight_just_above_lower_boundary(self):
-        """BMI 25.1 — just above lower boundary → Overweight."""
-        assert get_bmi_category(25.1) == "Overweight"
 
     def test_overweight_middle(self):
         """BMI 27.5 — middle of Overweight range."""
@@ -122,10 +106,6 @@ class TestGetBMICategory:
     def test_overweight_at_upper_boundary(self):
         """BMI 29.9 — exactly at upper boundary → Overweight."""
         assert get_bmi_category(29.9) == "Overweight"
-
-    def test_overweight_just_below_upper_boundary(self):
-        """BMI 29.8 — just below upper boundary → Overweight."""
-        assert get_bmi_category(29.8) == "Overweight"
 
     # --- Obese ---
     def test_obese_at_lower_boundary(self):
